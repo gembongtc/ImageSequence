@@ -44,3 +44,6 @@ adding event handlers:<br>
 imageseq.addHandler();</code>
 <code>// add function to trigger when sequence reach certain position,</code> <br>
 <code> param: objects of event handlers (init, playEnd, rewindEnd)</code><br>
+
+# Demo
+<a href="https://github.com/tcdsew/ImageSequence/blob/master/demo/demo.html">Here</a>
