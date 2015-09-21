@@ -1,0 +1,71 @@
+<html>
+<head>
+<script type="text/javascript" src="../image_sequence.js"></script>
+<link href="style.css" rel="stylesheet">
+<script type="text/javascript">
+    function onIntroEnd(event) {
+      logBox.innerHTML += "<br>Intro: End";
+      intro.rewind();
+    }
+    function onIntroRewindEnd(event){
+    	logBox.innerHTML += "<br>Intro: rewind end";
+    }
+    function onIntroClick(event){
+    	logBox.innerHTML += "<br>"+event.target.id+": Clicked";
+    	intro.init();
+    	intro.play();   
+    }
+</script>
+</head>
+<body>
+	<div class="page-content">
+	    <div src="assets/intro.jpg" id="intro" class="img-4sw7"></div>
+        <div src="assets/btn_expand_seq.jpg" id="expand_btn" class="img-lopf"></div>
+        <div src="assets/btn_watch.png" id="watch_btn" class="img-7wuu"></div>
+        <div src="assets/intro_audio_seq.png" id="audio_btn" class="img-d8ko"></div>
+        <div src="assets/btn_CTA2.png" id="get_btn" class="img-1ryc" style=""></div>
+    </div>	
+    <div id="log">Console:</div>
+    <script type="text/javascript">
+		var intro, exp, watch, audio, get_btn;
+		var logBox;
+
+	    (function(){
+	      function handleDomContentLoaded(event) {
+	        intro = new ImageSequence("intro", 300, {
+	          playEnd: onIntroEnd,
+	          rewindEnd: onIntroRewindEnd
+	        });
+	        exp = new ImageSequence("expand_btn", 132, {}, "button");
+	        watch = new ImageSequence("watch_btn", 108, {}, "button");
+	        audio = new ImageSequence("audio_btn", 37, {}, "toggle");
+	        get_btn = new ImageSequence("get_btn", 170, {}, "button");
+
+	        logBox = document.getElementById('log');
+	      }
+
+	      window.addEventListener('DOMContentLoaded',
+	        handleDomContentLoaded, false);
+
+	      // add click handler to intro
+	      var watchBtn = document.getElementById("watch_btn");
+	      watchBtn.addEventListener('click', onIntroClick);
+
+	      // add click handler to mute/unmute button
+		  var isMuted = false;
+		  var muteBtn = document.getElementById("audio_btn");
+		  muteBtn.addEventListener('click', onToggleAudio);
+
+		  function onToggleAudio(event) {
+    			logBox.innerHTML += "<br>"+event.target.id+": Clicked";
+				isMuted = !isMuted;
+				if (isMuted) {
+					audio.positionBottom();
+				} else {
+					audio.positionTop();
+				}
+			}
+	    })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
+.page-content {
+  width: 550px;
+  height: 400px;
+  top:20px;
+  left:20px;
+  position: absolute;
+}
+.img-4sw7 {
+  position: absolute;
+  width: 39000px;
+  height: 250px;
+  left: 0px;
+  top: 0px;
+}
+.img-d8ko {
+  position: absolute;
+  width: 259px;
+  height: 74px;
+  left: 0px;
+  top: 0px;
+}
+.img-lopf {
+  position: absolute;
+  width: 1320px;
+  height: 28px;
+  left: 11px;
+  top: 264px;
+}
+.img-7wuu {
+  position: absolute;
+  width: 756px;
+  height: 30px;
+  left: 11px;
+  top: 300px;
+}
+.img-1ryc {
+  position: absolute;
+  width: 1530px;
+  height: 40px;
+  left: 4px;
+  top: 335px;
+}
+#log{
+  position: absolute;
+  border:1px solid black;
+  width:500px;
+  left:400px;
+  top:20px;
+}

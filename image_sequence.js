@@ -26,7 +26,7 @@ var ImageSequence = function(_cont, _width, _handler, _type, _fps){
         }
     }
     
-     
+    console.log(container);     
     var fps = _fps || 24;
     var width = _width;
     var totalWidth = container.offsetWidth;
@@ -170,6 +170,7 @@ var ImageSequence = function(_cont, _width, _handler, _type, _fps){
             
             container.setAttribute("scaling","none");
             container.style.width = width+"px";
+            container.style.backgroundImage = "url("+container.getAttribute('src')+")";
             container.style.backgroundPosition = "0px "+y;
             currentFrame = 0;
             
