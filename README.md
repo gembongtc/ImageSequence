@@ -46,4 +46,4 @@ imageseq.addHandler();</code>
 <code> param: objects of event handlers (init, playEnd, rewindEnd)</code><br>
 
 # Demo
-<a href="https://github.com/tcdsew/ImageSequence/blob/master/demo/demo.html">Here</a>
+<a href="https://github.com/tcdsew/ImageSequence/blob/master/demo/demo.html" targer="_blank">Here</a>
