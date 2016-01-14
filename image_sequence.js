@@ -170,9 +170,13 @@ var ImageSequence = function(_cont, _width, _handler, _type, _fps){
             
             container.setAttribute("scaling","none");
             container.style.width = width+"px";
-            container.style.backgroundImage = "url("+container.getAttribute('src')+")";
             container.style.backgroundPosition = "0px "+y;
             currentFrame = 0;
+            
+            container.style.display = 'none';
+            setTimeout(function(){
+                container.style.display = 'block';
+            }, 10);
             
             switch(type){
                 case "toggle":
